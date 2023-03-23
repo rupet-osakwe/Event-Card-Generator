@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Card</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="instruction">
+        please fill the form with the appropriate details as you would like them
+        to appear on your event card
+      </h3>
+
+      <form class="hostForm">
+        <fieldset class="aboutHost">
+          <legend>Informations About The Host</legend>
+          <label for="honorific">Honorific</label>
+          <select class="honorific">
+            <option value="select one">select one</option>
+            <option value="Chief">Chief</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Honorable">Honorable</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Barr.">Barr.</option>
+            <option value="Engr.">Engr.</option>
+            <option value="Pst.">Pst</option>
+            <option value="Dcn.">Dcn.</option>
+            <option value="Dcns.">Dcns.</option>
+            <option value="HRH.">HRH.</option>
+          </select>
+          <label for="name">Name<input type="text" class="name" /></label>
+          <label for="phone">phone<input type="tel" class="phone" /></label>
+          <label for="email"
+            >email<input type="email" class="email" required
+          /></label>
+        </fieldset>
+        <fieldset class="aboutEvent">
+          <legend>Event Details</legend>
+          <label for="eventType">Event Type</label>
+          <div class="eventType">
+            <label for="namingCeremony"
+              >Naming Ceremony<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Naming Ceremony"
+            /></label>
+            <label for="childDedication"
+              >Child Dedication<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Child Dedication"
+            /></label>
+            <label for="birthdayCelebration"
+              >Birthday Celebration<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Birthday Celebration"
+            /></label>
+            <label for="weddingCeremony"
+              >Wedding Ceremony<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Wedding Ceremony"
+            /></label>
+
+            <label for="weddingAnniversary"
+              >Wedding Anniversary<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Wedding Anniversary"
+            /></label>
+            <label for="houseWorming"
+              >House Worming Party<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="House Worming Party"
+            /></label>
+            <label for="burialCelebration"
+              >Burial Ceremony<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Burial Ceremony"
+            /></label>
+            <label for="remembrance"
+              >Remembrance
+              <input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Remembrance"
+            /></label>
+            <label for="thanksGiving"
+              >Thanksgiving Service<input
+                type="radio"
+                name="eventType"
+                class="eventType"
+                value="Thanksgiving Service"
+            /></label>
+          </div>
+
+          <label for="date">Date<input type="date" class="date" /></label>
+          <label for="time">Time<input type="time" class="time" /></label>
+          <label for="venue"
+            >Venue<textarea
+              class="venue"
+              placeholder="Event Venue"
+            ></textarea></label
+          ><br />
+          <label for="eventColor"
+            >Color of the day<input type="text" class="eventColor"
+          /></label>
+
+          <label for="file" class="image">Upload An Image</label>
+          <input type="file" id="file" accept="image/jpg, image/png" />
+          <img src=" " id="imageChosen" class="rawImg" /><br />
+          <label for="addInfo"
+            >AdditionalNotes<input
+              type="text"
+              class="addInfo"
+              minlength="30"
+              maxlength="300"
+              placeholder="Write additional informations here"
+          /></label>
+        </fieldset>
+        <button onclick="formCard()" type="button" class="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="cardContainer"></div>
+    <span class="error"></span>
+
+    <script src="./class.js"></script>
+  </body>
+</html>
