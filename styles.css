@@ -13,6 +13,8 @@ legend {
 }
 .eventType {
   display: inline-block;
+  justify-content: space-between;
+  gap: 20px;
 }
 .aboutHost {
   display: flex;
@@ -119,12 +121,14 @@ legend {
   font-size: 13px;
   width: 130px;
   margin: 2rem 2px 5px 10px;
+  padding: 5px;
 }
 .addInfo {
   background-color: lightskyblue;
   color: indigo;
   border: 3px solid #081f37;
   width: 300px;
+  height: fit-content;
   border-radius: 0.5rem;
   padding: 8px;
   margin: 5px 15px 3px 2px;
@@ -162,4 +166,56 @@ legend {
   background-color: red;
   font-size: small;
   margin-top: 2px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 750px;
+    height: fit-content;
+  }
+  .addInfo {
+    width: 200px;
+  }
+  .cardContainer {
+    width: 489px;
+    height: fit-content;
+  }
+  .photoFile {
+    width: 107px;
+    height: 86px;
+  }
+  .error {
+    margin: 0 auto;
+  }
+  .no3 {
+    width: 420px;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 550px;
+    height: fit-content;
+  }
+  .addInfo {
+    width: 500px;
+    height: fit-content;
+  }
+  .cardContainer {
+    width: 500px;
+    height: fit-content;
+  }
+  .photoFile {
+    width: 100px;
+    height: 87px;
+  }
+  .error {
+    margin: 0 auto;
+  }
+  .no3 {
+    width: 450px;
+  }
+  .no4 {
+    width: 200px;
+    margin-top: 1.4rem;
+  }
 }
