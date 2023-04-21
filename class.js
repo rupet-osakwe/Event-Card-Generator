@@ -1,3 +1,4 @@
+const hostForm = document.querySelector(".container");
 const hostTitle = document.querySelector(".honorific");
 const hostName = document.querySelector(".name");
 const hostPhone = document.querySelector(".phone");
@@ -21,7 +22,7 @@ function formCard() {
   const isValidForm = validateForm();
   if (!isValidForm) {
     const errorEl = document.querySelector(".error");
-    errorEl.textContent = "Please fill out all fields to continue.";
+    errorEl.innerHTML = "Please fill out all fields to continue.";
     errorEl.classList.add(".show");
     setTimeout(() => errorEl.classList.remove(".show"), 5000);
     return;
@@ -35,13 +36,14 @@ function formCard() {
   // console.log(celebrationType);
 
   cardHolder.classList.add(".coreCard");
+  hostForm.style.display = "none";
 
   const cardContent = `<div class="head">Invitation Invitation Invitation...</div><div class="no1"> with pleasure in our hearts we the entire family members of ${hostTitle.value} ${hostName.value}</div> <img src="${hostImg.src}" class="photoFile"/>  <br> <div class="no2">invites you to a ${celebrationType}</div><br> <div class="no3">Venue: ${eventVenue.value}<br> Date: ${eventDate.value}<br> Time: ${eventTime.value}<br> Color of the day: ${eventColor.value}</div><br>
   <div class="foot"><p class="addInfo">${otherInfo.value}</p><div class="no4"> For further enquiries please contact ${hostPhone.value} or send an e-mail to ${hostMail.value}</div></div>`;
 
   cardHolder.innerHTML = cardContent;
   hostImg.style.display = "none";
-  // console.log(hostImg);
+  console.log(hostImg);
 }
 
 inFile.addEventListener("change", function () {
